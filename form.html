@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <div class="container">
+        <h2>Get in Touch with us</h2>
+        <form class="contact-form" action="https://formspree.io/f/mayrlqvk" method="POST">
+            <div class="inputArea">
+                <input type="text" placeholder="Your First Name" id="fName" required minlength="5"><br>
+            </div>
+            <div class="inputArea">
+                <input type="text" placeholder="Your Last Name" id="lName" minlength="5" required>
+            </div>
+            <div class="inputArea">
+                <input id="email" type="email" placeholder="Your Email id" id="email" required>
+            </div>
+            <div class="inputArea">
+                <input type="date" placeholder="Date" id="date" required>
+            </div>
+            <div class="inputArea">
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter Your Mobile" required>
+            </div>
+            <div class="inputArea">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message" minlength="50" required></textarea>
+            </div>
+            <button class="btn" id="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
