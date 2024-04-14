@@ -1,328 +1,327 @@
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  color: #6f6f6f;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth color change on hover */
+}
+
+header:hover {
+  background-color: #959292; /* Change background color on hover */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  transition: font-size 0.3s ease; /* Smooth font size change on hover */
+}
+
+header:hover h1 {
+  font-size: 40px; /* Increase font size on hover */
+  color: #f5f5f5;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto; /* Center navigation horizontally */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease; /* Smooth shadow change on hover */
+}
+
+section:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+section p {
+  line-height: 1.6;
+  color: #666;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Subtle zoom on hover */
+}
+
+.image-container img {
+  max-width: 70vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Subtle zoom on hover */
+}
+
+.video-container video {
+  max-width: 78vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+#diet1 {
+  float: right; /* Float the video container to the right */
+}
+
+.video-container:hover video {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+blockquote {
+  animation: quote-appear 1s ease-in-out forwards;
+}
+
+@keyframes quote-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  header {
-    background-size: cover;
-    background-position: center;
-    color: #6f6f6f;
-    padding: 20px;
-    text-align: center;
-    transition: background-color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Rotating box */
+.rotating-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent; /* Add border for the box */
+  border-top-color: rgba(255, 255, 255, 0.5); /* Make top border visible and transparent */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  position: absolute;
+  top: 50%; /* Adjust top position */
+  left: 50%; /* Adjust left position */
+  animation: rotateBox 5s linear infinite; /* Apply rotation animation */
+  box-sizing: content-box; /* Ensure border-box doesn't affect dimensions */
+}
+
+@keyframes rotateBox {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  
-  header:hover {
-    background-color: #959292; /* Change background color on hover */
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
-  
-  header h1 {
-    margin: 0;
-    font-size: 36px;
-    transition: font-size 0.3s ease; /* Smooth font size change on hover */
+}
+
+header {
+  background-size: cover;
+  background-position: center;
+  color: #6f6f6f;
+  padding: 20px;
+  text-align: center;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+  animation: headerAnimation 5s infinite alternate; /* Animation for continuous color change */
+}
+
+@keyframes headerAnimation {
+  0% {
+    background-color: #f5f5f5; /* Start color */
   }
-  
-  header:hover h1 {
-    font-size: 40px; /* Increase font size on hover */
-    color: #f5f5f5;
+  25% {
+    background-color: #959292; /* First color change */
   }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto; /* Center navigation horizontally */
+  50% {
+    background-color: #00ffff; /* Second color change */
   }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 20px;
+  75% {
+    background-color: #ff00ff; /* Third color change */
   }
-  
-  nav ul li a {
-    color: yellow;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease; /* Smooth color change on hover */
+  100% {
+    background-color: #ff0000; /* Fourth color change */
   }
-  
-  nav ul li a:hover {
-    color: white;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 30px;
-    transition: box-shadow 0.3s ease; /* Smooth shadow change on hover */
-  }
-  
-  section:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-  }
-  
-  section h2 {
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  section p {
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Subtle zoom on hover */
-  }
-  
-  .image-container img {
-    max-width: 70vw;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-  }
-  
-  .image-container:hover img {
-    transform: scale(1.1); /* Zoom in on hover */
-  }
-  
-  .video-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease; /* Subtle zoom on hover */
-  }
-  
-  .video-container video {
-    max-width: 78vw;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-  }
-  
-  #diet1 {
-    float: right; /* Float the video container to the right */
-  }
-  
-  .video-container:hover video {
-    transform: scale(1.1); /* Zoom in on hover */
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  blockquote {
-    animation: quote-appear 1s ease-in-out forwards;
-  }
-  
-  @keyframes quote-appear {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Rotating box */
-  .rotating-box {
-    width: 50px;
-    height: 50px;
-    border: 2px solid transparent; /* Add border for the box */
-    border-top-color: rgba(255, 255, 255, 0.5); /* Make top border visible and transparent */
-    border-radius: 8px; /* Add border-radius for rounded corners */
-    position: absolute;
-    top: 50%; /* Adjust top position */
-    left: 50%; /* Adjust left position */
-    animation: rotateBox 5s linear infinite; /* Apply rotation animation */
-    box-sizing: content-box; /* Ensure border-box doesn't affect dimensions */
-  }
-  
-  @keyframes rotateBox {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
-  
-  header {
-    background-size: cover;
-    background-position: center;
-    color: #6f6f6f;
-    padding: 20px;
-    text-align: center;
-    transition: color 0.3s ease; /* Smooth color change on hover */
-    animation: headerAnimation 5s infinite alternate; /* Animation for continuous color change */
-  }
-  
-  @keyframes headerAnimation {
-    0% {
-      background-color: #f5f5f5; /* Start color */
-    }
-    25% {
-      background-color: #959292; /* First color change */
-    }
-    50% {
-      background-color: #00ffff; /* Second color change */
-    }
-    75% {
-      background-color: #ff00ff; /* Third color change */
-    }
-    100% {
-      background-color: #ff0000; /* Fourth color change */
-    }
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 36px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto; /* Center navigation horizontally */
-  }
-  
-  /* Define the transition for paragraph elements */
-  p {
-    transition: color 0.3s ease;
-  }
-  
-  /* Define the transition for multimedia elements */
-  img,
-  video,
-  iframe {
-    transition: transform 0.3s ease;
-  }
-  
-  /* Define the hover effect for paragraph elements */
-  p:hover {
-    color: #660033; /* Change the color to a different color on hover */
-  }
-  
-  /* Define the hover effect for multimedia elements */
-  img:hover,
-  video:hover,
-  iframe:hover {
-    transform: scale(1.1); /* Scale up the size of the element on hover */
-  }
-  
-  /* Your existing CSS styles here */
-  /* Define the fixed-nav class for the navigation bar */
-  .fixed-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: white; /* Adjust as needed */
-    z-index: 1000; /* Ensure it's above other content */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
-  }
-  
- /* CSS code */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto; /* Center navigation horizontally */
+}
+
+/* Define the transition for paragraph elements */
+p {
+  transition: color 0.3s ease;
+}
+
+/* Define the transition for multimedia elements */
+img,
+video,
+iframe {
+  transition: transform 0.3s ease;
+}
+
+/* Define the hover effect for paragraph elements */
+p:hover {
+  color: #660033; /* Change the color to a different color on hover */
+}
+
+/* Define the hover effect for multimedia elements */
+img:hover,
+video:hover,
+iframe:hover {
+  transform: scale(1.1); /* Scale up the size of the element on hover */
+}
+
+/* Your existing CSS styles here */
+/* Define the fixed-nav class for the navigation bar */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+}
+
+/* CSS code */
 /* Hide the slideshow container by default */
 .slideshow-container {
-    display: none;
+  display: none;
 }
 
 /* Display the slideshow container when the show-slideshow class is applied */
 .slideshow-container.show-slideshow {
-    display: block;
+  display: block;
 }
 
 /* Additional styling for the slideshow section */
 #slideshow-section {
-    cursor: pointer; /* Change cursor to pointer on hover */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 #slideshow-section h2 {
-    margin-bottom: 10px;
-    color: #333;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .slideshow-item {
-    display: none; /* Hide individual slideshow items by default */
+  display: none; /* Hide individual slideshow items by default */
 }
 
 .slideshow-container.show-slideshow .slideshow-item {
-    display: block; /* Display slideshow items when the slideshow is shown */
+  display: block; /* Display slideshow items when the slideshow is shown */
 }
 
 .mySlides img {
-    max-width: 100%; /* Ensure the image does not exceed its container */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 300px; /* Set a maximum height for the image */
-    position: relative;
-    margin: 50px;
+  max-width: 100%; /* Ensure the image does not exceed its container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 300px; /* Set a maximum height for the image */
+  position: relative;
+  margin: 50px;
 }
 
-  
-  .close-button {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 36px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close-button:hover,
-  .close-button:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .prev,
-  .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px; /* Increase arrow size */
-    color: white;
-    cursor: pointer;
-    z-index: 1; /* Ensure arrows are above the slideshow content */
-    background-color: rgba(0, 0, 0, 0.5); /* Add a background color to make arrows visible */
-    padding: 10px; /* Add some padding for better clickability */
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-  
 
-  
+.close-button {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px; /* Increase arrow size */
+  color: white;
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above the slideshow content */
+  background-color: rgba(0, 0, 0, 0.5); /* Add a background color to make arrows visible */
+  padding: 10px; /* Add some padding for better clickability */
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
