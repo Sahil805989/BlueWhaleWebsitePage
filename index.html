@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    
     <header>
         <div class="rotating-box"></div>
         
         <h1>Blue Whale</h1>
-        <nav>
+        <nav id="nav">
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#habitat">Habitat</a></li>
@@ -26,6 +29,46 @@
         </nav>
     </header>
 
+    <!-- Slideshow Modal -->
+    
+        <div id="slideshow-modal" class="modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-content">
+              
+             
+
+              <div class="slideshow-content">
+                <a class="prev">&#10094;</a>
+              <a class="next">&#10095;</a>
+                <!-- Image 1 -->
+                <div class="mySlides">
+                    <img src="imgs/habitat.avif" alt="Image 1">
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="mySlides">
+                    <img src="imgs/media1.avif" alt="Image 2">
+                </div>
+                <div class="mySlides">
+                    <img src="imgs/media2.jpg" alt="Image 2">
+                </div>
+                <div class="mySlides">
+                    <img src="imgs/photo-1454991727061-be514eae86f7.avif" alt="Image 2">
+                </div>
+                <div class="mySlides">
+                    <img src="imgs/rep.jpg" alt="Image 2">
+                    
+                </div>
+                
+            </div>
+            </div>
+          </div>
+          
+        
+       
+        
+    </div>
+    
     <main>
         <section id="overview">
             <h2>Overview</h2>
@@ -49,6 +92,9 @@
             <!-- Placeholder for image -->
             <img src="imgs/photo-1454991727061-be514eae86f7.avif" alt="Blue Whale" />
         </section>
+        <button id="a">click me</button>
+
+       
         
 
         <section id="habitat">
@@ -168,78 +214,26 @@
                 </div>
                 
                 <div class="audio-item">
-                    <h3>Blue Whale - South Pacific</h3>
+                    <h3>Blue Whale - N. Atlantic</h3>
                     <audio controls>
-                        <source src="Videos/southpacific.wav" type="audio/wav">
+                        <source src="Videos/N Atlantic.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
                 
                 <div class="audio-item">
-                    <h3>Blue Whale - Atlantic</h3>
+                    <h3>Blue Whale - S. Pacific</h3>
                     <audio controls>
-                        <source src="Videos/Blue whale atlantic.wav" type="audio/wav">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                
-                <div class="audio-item">
-                    <h3>Blue Whale - 52 Hz Call</h3>
-                    <audio controls>
-                        <source src="Videos/blue whale.wav" type="audio/wav">
+                        <source src="Videos/S pacific.wav" type="audio/wav">
                         Your browser does not support the audio element.
                     </audio>
                 </div>
             </div>
         </section>
-        <section id="media-gallery">
-            <h2>Media Gallery</h2>
-            <div class="media-container">
-                <div class="media-item">
-                    <img src="imgs/media2.jpg" alt="Shark Image 1" class="shark-image" height="50%" width="50%" />
-                    <div class="image-text">
-                       
-                    </div>
-                </div>
-                <div class="media-item" >
-                    <img src="imgs/media1.avif" alt="Shark Image 2" class="shark-image" height="50%" width="40%" />
-                    <div class="image-text">
-                        
-                    </div>
-                </div>
-                <div class="media-item">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zFpm3BfwBjo?si=RMf73i6UxKcvQNxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="media-item" >
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qGK6a6_tQEI?si=gMscJsWgEjmfTUSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="video-text">
-                       
-                    </div>
-                </div>
-                <div class="media-item">
-                    <video controls class="shark-video" style="height: 50%; width: 50%;">
-                        <source src="Videos/Blue Whale close encounter Newport Harbor California.mp4" type="video/mp4" >
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-text">
-                        <p>Click to watch</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-
-
-        
-
-       
-
     </main>
-
+    
     <footer>
-        <p>&copy; 2024 Blue Whale Website</p>
+        <p>&copy; 2024 Blue Whale Conservation. All rights reserved.</p>
     </footer>
 </body>
 </html>
